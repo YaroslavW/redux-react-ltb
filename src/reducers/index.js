@@ -1,5 +1,9 @@
 export const initialState = {
-    user:'unknown user'
+    user: {
+        name: 'Yaroslav',
+        surname: 'Kolesnikov',
+        age: 48,
+    }
 }
 
 export function rootReducer(state = initialState){

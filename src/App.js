@@ -4,9 +4,10 @@ import './App.css';
 
 class App extends Component {
   render() {
+    const { name, surname, age } = this.props.user;
     return (
       <div className="App">
-        My App {this.props.user}
+        My App { name } { surname } { age }
       </div>
     );
   }
