@@ -4,10 +4,16 @@ import './App.css';
 
 class App extends Component {
   render() {
-    const { name, surname, age } = this.props.user;
+    const { user, page } = this.props;
     return (
       <div className="App">
-        My App { name } { surname } { age }
+        <header className="App-header">
+          <h1 className="App-title">Мой топ фото</h1>
+        </header>
+        <p>Привет, {user.name}!</p>
+        <p>
+          У тебя {page.photos.length} фото за {page.year} год
+        </p>
       </div>
     );
   }
@@ -15,7 +21,8 @@ class App extends Component {
 
 const mapStateToProps = store => {
   return {
-    user: store.user
+    user: store.user,
+    page: store.page,
   }
 }
 export default connect(mapStateToProps)(App);

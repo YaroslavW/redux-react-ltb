@@ -1,11 +1,8 @@
-export const initialState = {
-    user: {
-        name: 'Yaroslav',
-        surname: 'Kolesnikov',
-        age: 48,
-    }
-}
+import { combineReducers } from 'redux';
+import { userReducer } from './User';
+import { pageReducer } from './Page';
 
-export function rootReducer(state = initialState){
-    return state
-}
+export const rootReducer = combineReducers({
+    page: pageReducer,
+    user: userReducer,
+});
