@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { User } from './components/User';
-import { Page } from './components/Page';
+import { User } from '../components/User';
+import { Page } from '../components/Page';
 import { connect } from 'react-redux';
-import { setYear } from './actions/PageActions';
+import { setYear } from '../actions/PageActions';
 import './App.css';
 
 class App extends Component {
